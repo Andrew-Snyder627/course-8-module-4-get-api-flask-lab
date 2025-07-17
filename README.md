@@ -1,4 +1,3 @@
-
 # Module Lab: Building RESTful GET APIs with Flask
 
 ## Learning Goals
@@ -136,15 +135,19 @@ Test your endpoints using your browser, Postman, or curl:
 ## Considerations
 
 **1. Input Validation**
+
 - Handle invalid query parameters or IDs with a clear error message.
 
 **2. Case Sensitivity in Filtering**
+
 - Normalize both category input and stored data to avoid mismatches.
 
 **3. Consistent Response Structure**
+
 - Ensure all responses follow the same JSON format.
 
 **4. Modular Code**
+
 - Keep logic clean and organized. As your API grows, consider separating routes into blueprints and data into separate modules.
 
 ---
@@ -156,6 +159,46 @@ After completing this lab, you will:
 ✅ Understand RESTful GET route structure  
 ✅ Build routes that serve both collections and single resources  
 ✅ Use query strings to filter results  
-✅ Return structured JSON and meaningful HTTP responses  
+✅ Return structured JSON and meaningful HTTP responses
 
 This lays the foundation for full CRUD APIs in the next module.
+
+## Overview
+
+This project implements a **Read-Only RESTful API** using Python and Flask. The API serves a fictional product catalog and demonstrates:
+
+- Handling `GET` requests
+- Using route parameters and query strings
+- Returning consistent JSON responses
+- Following RESTful conventions
+
+---
+
+## API Routes
+
+- `GET /` – Welcome message
+- `GET /products` – List all products
+- `GET /products?category=books` – Filter products by category
+- `GET /products/<id>` – Get a single product by ID
+
+## Endpoints
+
+### Base
+
+![Base URL](images/root.png)
+
+### All Products
+
+![All Products](images/all-products.png)
+
+### One Product
+
+![Product ID 2](images/products-id-2.png)
+
+### Book Category
+
+![Category Books](images/category=books.png)
+
+### Not Found
+
+![Not Found Product](images/not-found.png)
